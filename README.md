@@ -1,10 +1,10 @@
-# Certified Checkpoint Diffusion
+# Checkpoint-Conditioned Diffusion
 
-Paper-aligned implementation of **Certified Checkpoint Diffusion (CCD)**. The
+Paper-aligned implementation of **Checkpoint-Conditioned Diffusion (CCD)**. The
 reproducible path is a three-stage pipeline:
 
 ```text
-certified local objects -> checkpoint encoder + VQ codebook
+verified local objects -> checkpoint encoder + VQ codebook
                         -> level-augmented global checkpoint DAG
                         -> checkpoint-conditioned edge denoiser
 ```
@@ -19,16 +19,12 @@ The implementation keeps the five paper concepts separate:
 
 ```text
 H                         visible labeled quotient graph
-O(H)                      certified object (H, pi, sigma, B, eta, h_cert)
+O(H)                      verified object (H, pi, sigma, B, eta, h_cert)
 T(O(H))                   padded neural tensors (X_obj, A_Q, m)
 z_k                       learned 128-dimensional VQ vector
 C_k                       explicit reusable dataset-level entry
 u = (C_k, contraction_l)  node in the acyclic global planning graph
 ```
-
-`CheckpointState` is a construction/decoded-state carrier, not the model-facing
-definition of bare `H`. Corpus and model code crosses the object boundary via
-`CertifiedCheckpointObject` and `certified_object_to_tensors`.
 
 Every local coarse-to-fine edge stores
 
@@ -50,7 +46,7 @@ The main YAML configurations encode the supplementary settings:
 
 | Component | Setting |
 |---|---|
-| Certified-object tensor | max 32 nodes, node width 21, 5 edge categories |
+| Object tensor | max 32 nodes, node width 21, 5 edge categories |
 | Checkpoint encoder | width 128, 2 layers, 4 heads, FFN 512, dropout 0.1 |
 | Codebook | capacity 512, code width 128 |
 | Target / guide encoders | width 192, 4 / 2 layers, 6 heads, FFN 768 |
@@ -108,7 +104,7 @@ PYTHONPATH=src python scripts/preprocess_dag_qm9.py \
   --seed 0
 ```
 
-Each corpus record contains the source graph, every certified local checkpoint,
+Each corpus record contains the source graph, every verified local checkpoint,
 the explicit object fields, adjacent/skip refinement edges, and `mu`.
 
 ### 2. Learn the shared checkpoint representation
