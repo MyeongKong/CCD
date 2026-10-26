@@ -1,0 +1,38 @@
+seed: 0
+data:
+  corpus_dir: runs/smoke/corpus
+diffusion:
+  timesteps: 16
+  node_noise_scale: 0.01
+  denoiser_evaluations: 8
+  node_corruption: mixed_state
+  level0_atom_categorical: true
+  binary_object_logits: true
+  categorical_activity: true
+  categorical_reverse_posterior: true
+  activity_capacity_mask: true
+  factorized_edge_activity_posterior: true
+model:
+  hidden_dim: 48
+  num_layers: 2
+  guide_num_layers: 1
+  num_heads: 4
+  dropout: 0.0
+train:
+  run_dir: runs/smoke/train
+  device: cpu
+  epochs: 1
+  batch_size: 4
+  num_workers: 0
+  lr: 0.001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  cond_drop_prob: 0.1
+  global_drop_prob: 0.1
+loss:
+  node: 1.0
+  edge: 1.0
+  active: 0.25
+  split: 0.05
+  attachment: 0.05
+  consistency: 0.1

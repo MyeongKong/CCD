@@ -1,0 +1,107 @@
+{
+  "molecules": [
+    {
+      "source_id": "cyclohexane",
+      "atom_symbols": ["C", "C", "C", "C", "C", "C"],
+      "charges": [0, 0, 0, 0, 0, 0],
+      "edges": [
+        {"u": 0, "v": 1, "label": "single"},
+        {"u": 1, "v": 2, "label": "single"},
+        {"u": 2, "v": 3, "label": "single"},
+        {"u": 3, "v": 4, "label": "single"},
+        {"u": 4, "v": 5, "label": "single"},
+        {"u": 0, "v": 5, "label": "single"}
+      ],
+      "ring_atoms": [0, 1, 2, 3, 4, 5],
+      "ring_edges": [
+        {"u": 0, "v": 1},
+        {"u": 1, "v": 2},
+        {"u": 2, "v": 3},
+        {"u": 3, "v": 4},
+        {"u": 4, "v": 5},
+        {"u": 0, "v": 5}
+      ]
+    },
+    {
+      "source_id": "methyl_cyclohexane",
+      "atom_symbols": ["C", "C", "C", "C", "C", "C", "C"],
+      "charges": [0, 0, 0, 0, 0, 0, 0],
+      "edges": [
+        {"u": 0, "v": 1, "label": "single"},
+        {"u": 1, "v": 2, "label": "single"},
+        {"u": 2, "v": 3, "label": "single"},
+        {"u": 3, "v": 4, "label": "single"},
+        {"u": 4, "v": 5, "label": "single"},
+        {"u": 0, "v": 5, "label": "single"},
+        {"u": 0, "v": 6, "label": "single"}
+      ],
+      "ring_atoms": [0, 1, 2, 3, 4, 5],
+      "ring_edges": [
+        {"u": 0, "v": 1},
+        {"u": 1, "v": 2},
+        {"u": 2, "v": 3},
+        {"u": 3, "v": 4},
+        {"u": 4, "v": 5},
+        {"u": 0, "v": 5}
+      ]
+    },
+    {
+      "source_id": "propane_ringless",
+      "atom_symbols": ["C", "C", "C"],
+      "charges": [0, 0, 0],
+      "edges": [
+        {"u": 0, "v": 1, "label": "single"},
+        {"u": 1, "v": 2, "label": "single"}
+      ],
+      "ring_atoms": [],
+      "ring_edges": []
+    },
+    {
+      "source_id": "pyridine_like",
+      "atom_symbols": ["N", "C", "C", "C", "C", "C", "O"],
+      "charges": [0, 0, 0, 0, 0, 0, 0],
+      "edges": [
+        {"u": 0, "v": 1, "label": "aromatic"},
+        {"u": 1, "v": 2, "label": "aromatic"},
+        {"u": 2, "v": 3, "label": "aromatic"},
+        {"u": 3, "v": 4, "label": "aromatic"},
+        {"u": 4, "v": 5, "label": "aromatic"},
+        {"u": 0, "v": 5, "label": "aromatic"},
+        {"u": 3, "v": 6, "label": "single"}
+      ],
+      "ring_atoms": [0, 1, 2, 3, 4, 5],
+      "ring_edges": [
+        {"u": 0, "v": 1},
+        {"u": 1, "v": 2},
+        {"u": 2, "v": 3},
+        {"u": 3, "v": 4},
+        {"u": 4, "v": 5},
+        {"u": 0, "v": 5}
+      ]
+    },
+    {
+      "source_id": "ethyl_cyclohexane",
+      "atom_symbols": ["C", "C", "C", "C", "C", "C", "C", "C"],
+      "charges": [0, 0, 0, 0, 0, 0, 0, 0],
+      "edges": [
+        {"u": 0, "v": 1, "label": "single"},
+        {"u": 1, "v": 2, "label": "single"},
+        {"u": 2, "v": 3, "label": "single"},
+        {"u": 3, "v": 4, "label": "single"},
+        {"u": 4, "v": 5, "label": "single"},
+        {"u": 0, "v": 5, "label": "single"},
+        {"u": 0, "v": 6, "label": "single"},
+        {"u": 6, "v": 7, "label": "single"}
+      ],
+      "ring_atoms": [0, 1, 2, 3, 4, 5],
+      "ring_edges": [
+        {"u": 0, "v": 1},
+        {"u": 1, "v": 2},
+        {"u": 2, "v": 3},
+        {"u": 3, "v": 4},
+        {"u": 4, "v": 5},
+        {"u": 0, "v": 5}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+networkx>=3.0
+numpy>=1.23
+torch>=2.0
+pyyaml>=6.0
+
+# Install for SMILES/QM9 preprocessing:
+# rdkit>=2023.9

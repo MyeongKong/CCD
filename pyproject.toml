@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "checkpoint-dag-diffusion"
+version = "0.1.0"
+description = "Topology-guided checkpoint diffusion for molecular graph generation"
+requires-python = ">=3.10"
+dependencies = [
+  "networkx>=3.0",
+  "numpy>=1.23",
+  "torch>=2.0",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+chem = ["rdkit>=2023.9"]
+eval = ["rdkit>=2023.9", "fcd_torch>=1.0"]
+test = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
